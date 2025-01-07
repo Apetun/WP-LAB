@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Share Your Winter Vacation Videos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #2980b9;
+            margin-top: 50px;
+        }
+        .container {
+            width: 60%; 
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+        .video-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px; 
+            justify-content: center;
+        }
+        .video-item {
+            width: 240px; 
+            text-align: center;
+            margin: 15px;
+        }
+        video {
+            max-width: 100%; 
+            height: auto;
+            border-radius: 10px;
+        }
+        .video-item h3 {
+            font-size: 16px;
+            color: #2c3e50;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Share Your Winter Vacation Videos</h1>
+    <p style="text-align: center;">Enjoy the beauty of winter through these videos. Click to watch!</p>
+
+    <div class="video-list">
+        <!-- Video 1 -->
+        <div class="video-item">
+            <h3>Snowy Mountain Adventure</h3>
+            <video controls>
+                <source src="./v1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-item">
+            <h3>Winter Wonderland</h3>
+            <video controls>
+                <source src="./v2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-item">
+            <h3>Ice Skating at the Park</h3>
+            <video controls>
+                <source src="./v3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="video-item">
+            <h3>Holiday Lights Drive</h3>
+            <video controls>
+                <source src="./v4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
