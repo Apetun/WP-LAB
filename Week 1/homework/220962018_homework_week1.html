@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Registration Form</title>
+</head>
+<body>
+    <h1>Conference Registration Form</h1>
+    <form action="./submit-form" method="post">
+        <!-- Participant Details -->
+        <fieldset>
+            <legend>Participant Details</legend>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full_name" placeholder="Enter your full name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@domain.com" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="\d{10}" placeholder="Enter your 10-digit number" required><br><br>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="60" required><br><br>
+        </fieldset>
+        
+        <!-- Event Preferences -->
+        <fieldset>
+            <legend>Event Preferences</legend>
+            <label for="events">Select up to two events:</label>
+            <select id="events" name="events[]" multiple size="5" required>
+                <option value="coding_contest">Coding Contest</option>
+                <option value="hackathon">Hackathon</option>
+                <option value="paper_presentation">Paper Presentation</option>
+                <option value="robotics_challenge">Robotics Challenge</option>
+                <option value="keynote_session">Keynote Session</option>
+            </select><br>
+            <small>Hold Ctrl (Windows) or Command (Mac) to select multiple options.</small><br><br>
+        </fieldset>
+        
+        <!-- Accommodation Details -->
+        <fieldset>
+            <legend>Accommodation Details</legend>
+            <label>
+                <input type="radio" name="accommodation" value="hostel" required> Hostel
+            </label><br>
+            <label>
+                <input type="radio" name="accommodation" value="hotel"> Hotel
+            </label><br>
+            <label>
+                <input type="radio" name="accommodation" value="none"> None
+            </label><br><br>
+        </fieldset>
+        
+        <!-- Dietary Preferences -->
+        <fieldset>
+            <legend>Dietary Preferences</legend>
+            <label>
+                <input type="checkbox" name="dietary_preferences" value="vegetarian"> Vegetarian
+            </label><br>
+            <label>
+                <input type="checkbox" name="dietary_preferences" value="non_vegetarian"> Non-Vegetarian
+            </label><br>
+            <label>
+                <input type="checkbox" name="dietary_preferences" value="vegan"> Vegan
+            </label><br>
+            <label>
+                <input type="checkbox" id="other-dietary" name="dietary_preferences" value="other"> Other (Specify below)
+            </label><br>
+            <input type="text" id="other-dietary-input" name="other_dietary" placeholder="Specify other dietary preferences" disabled><br><br>
+        </fieldset>
+        
+        <!-- Additional Info -->
+        <fieldset>
+            <legend>Additional Info</legend>
+            <label for="upload-docs">Upload Student ID (PDF only, max 5 MB):</label>
+            <input type="file" id="upload-docs" name="student_id" accept=".pdf" ><br><br>
+            
+            <label for="comments">Comments/Requests (optional, max 300 characters):</label><br>
+            <textarea id="comments" name="comments" maxlength="300" rows="5" cols="40"></textarea><br><br>
+        </fieldset>
+        
+        <!-- Consent and Submission -->
+        <fieldset>
+            <legend>Consent and Submission</legend>
+            <label>
+                <input type="checkbox" name="consent" required> I agree to the terms and conditions.
+            </label><br><br>
+            
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+    </form>
+
+    <script>
+        // Enable the "Other" dietary preference text input only when the checkbox is checked
+        const otherDietaryCheckbox = document.getElementById('other-dietary');
+        const otherDietaryInput = document.getElementById('other-dietary-input');
+        
+        otherDietaryCheckbox.addEventListener('change', () => {
+            otherDietaryInput.disabled = !otherDietaryCheckbox.checked;
+        });
+    </script>
+</body>
+</html>
