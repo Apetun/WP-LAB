@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Bio-Data Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #13810f;
+        }
+
+        fieldset {
+            border: 2px solid #b2d1b2;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-size: 18px;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+            color: #333;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .radio-group, .checkbox-group {
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 8px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .submit-section {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Bio-Data Form</h2>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Gender</legend>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="gender" value="Male"> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Female"> Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Other"> Other
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Hobbies</legend>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" name="hobbies" value="Reading"> Reading
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="Sports"> Sports
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="Music"> Music
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="Traveling"> Traveling
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Educational Background</legend>
+            <table>
+                <tr>
+                    <th>Degree</th>
+                    <th>Institution</th>
+                    <th>Year of Graduation</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="degree" placeholder="Degree" required></td>
+                    <td><input type="text" name="institution" placeholder="Institution" required></td>
+                    <td><input type="text" name="year" placeholder="Year" required></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <div class="submit-section">
+            <button type="submit">Submit Form</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

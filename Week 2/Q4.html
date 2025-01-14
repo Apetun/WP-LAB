@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Optional: Include jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .carousel-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .table {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: #333;
+        }
+        .timetable-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <!-- Carousel for Days -->
+    <div id="dayCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Day 1 (Monday) -->
+            <div class="carousel-item active">
+                <h3 class="timetable-title">Monday - Class Timetable</h3>
+                <!-- Table for Timetable -->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Subject</th>
+                            <th>Instructor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8:00 AM - 9:00 AM</td>
+                            <td>Mathematics</td>
+                            <td>Dr. Smith</td>
+                        </tr>
+                        <tr>
+                            <td>9:00 AM - 10:00 AM</td>
+                            <td>Physics</td>
+                            <td>Prof. Johnson</td>
+                        </tr>
+                        <tr>
+                            <td>10:30 AM - 11:30 AM</td>
+                            <td>Chemistry</td>
+                            <td>Dr. Lee</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM - 1:00 PM</td>
+                            <td>Computer Science</td>
+                            <td>Mr. Brown</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Day 2 (Tuesday) -->
+            <div class="carousel-item">
+                <h3 class="timetable-title">Tuesday - Class Timetable</h3>
+                <!-- Table for Timetable -->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Subject</th>
+                            <th>Instructor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8:00 AM - 9:00 AM</td>
+                            <td>Biology</td>
+                            <td>Dr. Walker</td>
+                        </tr>
+                        <tr>
+                            <td>9:00 AM - 10:00 AM</td>
+                            <td>History</td>
+                            <td>Prof. Davis</td>
+                        </tr>
+                        <tr>
+                            <td>10:30 AM - 11:30 AM</td>
+                            <td>Geography</td>
+                            <td>Mr. Harris</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM - 1:00 PM</td>
+                            <td>English Literature</td>
+                            <td>Ms. Clark</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Day 3 (Wednesday) -->
+            <div class="carousel-item">
+                <h3 class="timetable-title">Wednesday - Class Timetable</h3>
+                <!-- Table for Timetable -->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Subject</th>
+                            <th>Instructor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8:00 AM - 9:00 AM</td>
+                            <td>Mathematics</td>
+                            <td>Dr. Smith</td>
+                        </tr>
+                        <tr>
+                            <td>9:00 AM - 10:00 AM</td>
+                            <td>Physics</td>
+                            <td>Prof. Johnson</td>
+                        </tr>
+                        <tr>
+                            <td>10:30 AM - 11:30 AM</td>
+                            <td>Chemistry</td>
+                            <td>Dr. Lee</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM - 1:00 PM</td>
+                            <td>Computer Science</td>
+                            <td>Mr. Brown</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <a class="carousel-control-prev" href="#dayCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#dayCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

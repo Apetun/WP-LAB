@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Page Layout</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .input-group-addon {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Top Section -->
+    <div class="section bg-light p-5 rounded">
+        <h1 class="text-center">Top Section - Welcome</h1>
+        <p class="text-center">This is the top section of the page. Below are input groups, badges, and a button group.</p>
+        
+        <!-- Input Group with Badge and Button -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            <div class="input-group-append">
+                <span class="badge badge-success">Active</span>
+            </div>
+        </div>
+        
+        <!-- Button Group -->
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary">Button 1</button>
+            <button type="button" class="btn btn-secondary">Button 2</button>
+            <button type="button" class="btn btn-success">Button 3</button>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="row">
+        <!-- Left Part -->
+        <div class="col-md-4 section bg-light p-4 rounded">
+            <h4>Left Part</h4>
+            <p>Enter your email:</p>
+            <div class="input-group">
+                <input type="email" class="form-control" placeholder="Email Address">
+                <div class="input-group-append">
+                    <button class="btn btn-info" type="button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle Part -->
+        <div class="col-md-4 section bg-light p-4 rounded">
+            <h4>Middle Part</h4>
+            <p>Choose your options:</p>
+            <div class="input-group">
+                <select class="custom-select">
+                    <option selected>Choose...</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <div class="input-group-append">
+                    <span class="badge badge-warning">New</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Part -->
+        <div class="col-md-4 section bg-light p-4 rounded">
+            <h4>Right Part</h4>
+            <p>Submit your message:</p>
+            <textarea class="form-control" rows="3" placeholder="Enter your message"></textarea>
+            <button type="button" class="btn btn-danger mt-3">Send</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
