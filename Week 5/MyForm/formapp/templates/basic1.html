@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promotion Eligibility Checker</title>
+    <script>
+        function checkEligibility() {
+            var doj = document.getElementById("doj").value;
+            if (!doj) {
+                alert("Please enter the Date of Joining");
+                return;
+            }
+            
+            var joiningDate = new Date(doj);
+            var currentDate = new Date();
+            var experience = (currentDate - joiningDate) / (1000 * 60 * 60 * 24 * 365); // Convert milliseconds to years
+            
+            if (experience >= 5) {
+                document.getElementById("result").innerText = "YES";
+            } else {
+                document.getElementById("result").innerText = "NO";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Promotion Eligibility Checker</h2>
+    <label for="empId">Select Employee ID:</label>
+    <select id="empId">
+        <option value="101">101</option>
+        <option value="102">102</option>
+        <option value="103">103</option>
+        <option value="104">104</option>
+    </select>
+    <br><br>
+    <label for="doj">Date of Joining:</label>
+    <input type="date" id="doj">
+    <br><br>
+    <button onclick="checkEligibility()">Am I Eligible for Promotion?</button>
+    <br><br>
+    <label>Eligibility: <span id="result"></span></label>
+</body>
+</html>

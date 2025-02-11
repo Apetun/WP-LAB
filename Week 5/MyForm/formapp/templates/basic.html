@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #13810f;
+        }
+        label {
+            font-size: 16px;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+        }
+        .result {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Details Form</h2>
+    <form id="studentForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="phone">Contact Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="english">Marks in English:</label>
+        <input type="number" id="english" name="english" min="0" max="100" required>
+
+        <label for="physics">Marks in Physics:</label>
+        <input type="number" id="physics" name="physics" min="0" max="100" required>
+
+        <label for="chemistry">Marks in Chemistry:</label>
+        <input type="number" id="chemistry" name="chemistry" min="0" max="100" required>
+
+        <button type="button" onclick="addStudentDetails()">Submit</button>
+    </form>
+    
+    <label>Student Details:</label>
+    <textarea id="studentDetails" readonly></textarea>
+    
+    <div class="result">Total Percentage: <span id="percentage">0</span>%</div>
+</div>
+
+<script>
+    function addStudentDetails() {
+        let name = document.getElementById("name").value;
+        let dob = document.getElementById("dob").value;
+        let address = document.getElementById("address").value;
+        let phone = document.getElementById("phone").value;
+        let email = document.getElementById("email").value;
+        let english = parseFloat(document.getElementById("english").value) || 0;
+        let physics = parseFloat(document.getElementById("physics").value) || 0;
+        let chemistry = parseFloat(document.getElementById("chemistry").value) || 0;
+
+        let totalMarks = english + physics + chemistry;
+        let percentage = (totalMarks / 300) * 100;
+
+        let details = `Name: ${name}\nDate of Birth: ${dob}\nAddress: ${address}\nContact: ${phone}\nEmail: ${email}\nMarks: English - ${english}, Physics - ${physics}, Chemistry - ${chemistry}\nTotal Marks: ${totalMarks}`;
+
+        document.getElementById("studentDetails").value = details;
+        document.getElementById("percentage").innerText = percentage.toFixed(2);
+    }
+</script>
+
+</body>
+</html>
