@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Voting</title>
+</head>
+<body>
+    <h1>How is the book ASP.NET with C# by Vipul Prakashan?</h1>
+
+    {% if show_results %}
+        <p><strong>Good:</strong> {{ good_pct|floatformat:2 }}%</p>
+        <p><strong>Satisfactory:</strong> {{ sat_pct|floatformat:2 }}%</p>
+        <p><strong>Bad:</strong> {{ bad_pct|floatformat:2 }}%</p>
+    {% else %}
+        <form method="POST">
+            {% csrf_token %}
+            <label>
+                <input type="radio" name="choice" value="Good">
+                Good
+            </label><br>
+            <label>
+                <input type="radio" name="choice" value="Satisfactory">
+                Satisfactory
+            </label><br>
+            <label>
+                <input type="radio" name="choice" value="Bad">
+                Bad
+            </label><br><br>
+            <button type="submit">Vote</button>
+        </form>
+    {% endif %}
+</body>
+</html>
