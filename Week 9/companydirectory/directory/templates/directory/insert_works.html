@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert into WORKS</title>
+</head>
+<body>
+    <h1>Insert Record into WORKS</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Insert</button>
+    </form>
+    <p>
+        <a href="{% url 'query_company' %}">Query Company Data</a>
+    </p>
+</body>
+</html>

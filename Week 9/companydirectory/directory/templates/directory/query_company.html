@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Company Data</title>
+</head>
+<body>
+    <h1>Retrieve People Working for a Company</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Search</button>
+    </form>
+
+    {% if results %}
+        <h2>Results:</h2>
+        <ul>
+            {% for entry in results %}
+                <li>{{ entry.person_name }} lives in {{ entry.city }}</li>
+            {% endfor %}
+        </ul>
+    {% elif results is not none %}
+        <p>No records found.</p>
+    {% endif %}
+
+    <p>
+        <a href="{% url 'insert_works' %}">Insert into WORKS</a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pages List</title>
+</head>
+<body>
+    <h1>Pages</h1>
+    <ul>
+        {% for page in pages %}
+            <li>
+                <strong>{{ page.title }}</strong> ({{ page.views }} views) - 
+                Category: {{ page.category.name }} -
+                <a href="{{ page.url }}" target="_blank">{{ page.url }}</a>
+            </li>
+        {% empty %}
+            <li>No pages yet.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_page' %}">Add a New Page</a>
+</body>
+</html>
